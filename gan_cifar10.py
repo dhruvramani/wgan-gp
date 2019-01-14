@@ -180,6 +180,7 @@ preprocess = torchvision.transforms.Compose([
                            ])
 
 for iteration in range(ITERS):
+    print("\n")
     start_time = time.time()
     ############################
     # (1) Update D network
