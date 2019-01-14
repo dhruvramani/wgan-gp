@@ -21,7 +21,7 @@ from torch import optim
 # Download CIFAR-10 (Python version) at
 # https://www.cs.toronto.edu/~kriz/cifar.html and fill in the path to the
 # extracted files here!
-DATA_DIR = './cifar-10/'
+DATA_DIR = '/home/nevronas/dataset/cifar-10/'
 if len(DATA_DIR) == 0:
     raise Exception('Please specify path to data directory in gan_cifar.py!')
 
