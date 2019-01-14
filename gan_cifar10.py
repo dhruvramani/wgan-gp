@@ -275,6 +275,6 @@ for iteration in range(ITERS):
         generate_image(iteration, netG)
 
     # Save logs every 100 iters
-    if (iteration < 5) or (iteration % 100 == 99):
+    if (int(iteration % 100) == 99):
         lib.plot.flush()
     lib.plot.tick()
