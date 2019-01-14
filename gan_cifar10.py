@@ -39,7 +39,7 @@ class Generator(nn.Module):
         super(Generator, self).__init__()
         preprocess = nn.Sequential(
             nn.Linear(128, 4 * 4 * 4 * DIM),
-            nn.BatchNorm2d(4 * 4 * 4 * DIM),
+            #nn.BatchNorm2d(4 * 4 * 4 * DIM),
             nn.ReLU(True),
         )
 
