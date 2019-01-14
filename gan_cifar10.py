@@ -147,7 +147,7 @@ def generate_image(frame, netG):
     samples = samples.mul(0.5).add(0.5)
     samples = samples.cpu().data.numpy()
 
-    lib.save_images.save_images(samples, './tmp/cifar10/samples_{}.jpg'.format(frame))
+    #lib.save_images.save_images(samples, './tmp/cifar10/samples_{}.jpg'.format(frame))
 
 # For calculating inception score
 def get_inception_score(G, ):
