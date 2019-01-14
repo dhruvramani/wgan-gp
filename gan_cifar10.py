@@ -7,7 +7,7 @@ import tflib.save_images
 import tflib.mnist
 import tflib.cifar10
 import tflib.plot
-import tflib.inception_score
+#import tflib.inception_score
 
 import numpy as np
 
@@ -249,9 +249,9 @@ for iteration in xrange(ITERS):
     lib.plot.plot('./tmp/cifar10/wasserstein distance', Wasserstein_D.cpu().data.numpy())
 
     # Calculate inception score every 1K iters
-    if False and iteration % 1000 == 999:
-        inception_score = get_inception_score(netG)
-        lib.plot.plot('./tmp/cifar10/inception score', inception_score[0])
+    #if False and iteration % 1000 == 999:
+    #    inception_score = get_inception_score(netG)
+    #    lib.plot.plot('./tmp/cifar10/inception score', inception_score[0])
 
     # Calculate dev loss and generate samples every 100 iters
     if iteration % 100 == 99:
