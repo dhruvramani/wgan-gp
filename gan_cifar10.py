@@ -173,7 +173,7 @@ def inf_train_gen():
             # yield images.astype('float32').reshape(BATCH_SIZE, 3, 32, 32).transpose(0, 2, 3, 1)
             yield images
 
-gen = iterator(inf_train_gen())
+gen = iter(inf_train_gen())
 preprocess = torchvision.transforms.Compose([
                                torchvision.transforms.ToTensor(),
                                torchvision.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
