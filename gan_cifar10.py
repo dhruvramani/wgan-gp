@@ -240,7 +240,7 @@ for iteration in range(ITERS):
     fake = netG(noisev)
     G = netD(fake)
     G = G.mean()
-    G.backward(mone)
+    G.backward()
     G_cost = -G
     optimizerG.step()
 
