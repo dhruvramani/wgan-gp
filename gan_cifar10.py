@@ -204,7 +204,7 @@ for iteration in range(ITERS):
 
         D_real = netD(real_data_v)
         D_real = D_real.mean()
-        D_real.backward(mone)
+        D_real.backward()
 
         # train with fake
         noise = torch.randn(BATCH_SIZE, 128)
@@ -215,7 +215,7 @@ for iteration in range(ITERS):
         inputv = fake
         D_fake = netD(inputv)
         D_fake = D_fake.mean()
-        D_fake.backward(one)
+        D_fake.backward()
 
         # train with gradient penalty
         gradient_penalty = calc_gradient_penalty(netD, real_data_v.data, fake.data)
