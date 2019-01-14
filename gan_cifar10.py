@@ -245,10 +245,9 @@ for iteration in range(ITERS):
     optimizerG.step()
 
     # Write logs and save samples
-    lib.plot.plot('./tmp/cifar10/train disc cost', D_cost.cpu().data.numpy())
-    lib.plot.plot('./tmp/cifar10/time', time.time() - start_time)
-    lib.plot.plot('./tmp/cifar10/train gen cost', G_cost.cpu().data.numpy())
-    lib.plot.plot('./tmp/cifar10/wasserstein distance', Wasserstein_D.cpu().data.numpy())
+    print("D Cost : {}".format(D_cost.cpu().data.numpy()), end=" ")
+    print("G Cost : {}".format(G_cost.cpu().data.numpy()), end=" ")
+    print("W Cost : {}".format(Wasserstein_D.cpu().data.numpy()), end="\r")
 
     # Calculate inception score every 1K iters
     #if False and iteration % 1000 == 999:
@@ -275,6 +274,6 @@ for iteration in range(ITERS):
         generate_image(iteration, netG)
 
     # Save logs every 100 iters
-    if (int(iteration % 100) == 99):
-        lib.plot.flush()
-    lib.plot.tick()
+    #if (int(iteration % 100) == 99):
+    #    lib.plot.flush()
+    #lib.plot.tick()
