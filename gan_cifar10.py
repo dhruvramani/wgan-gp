@@ -180,7 +180,6 @@ preprocess = torchvision.transforms.Compose([
                            ])
 
 for iteration in range(ITERS):
-    print("\n")
     start_time = time.time()
     ############################
     # (1) Update D network
@@ -273,6 +272,7 @@ for iteration in range(ITERS):
         lib.plot.plot('./tmp/cifar10/dev disc cost', np.mean(dev_disc_costs))
 
         generate_image(iteration, netG)
+        print("\n")
 
     # Save logs every 100 iters
     #if (int(iteration % 100) == 99):
