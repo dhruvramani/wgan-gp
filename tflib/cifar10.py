@@ -28,5 +28,4 @@ def cifar_generator(filenames, batch_size, data_dir):
 
 
 def load(batch_size, data_dir):
-    return cifar_generator(['data_batch_1','data_batch_2','data_batch_3','data_batch_4','data_batch_5'], batch_size, data_dir), 
-        cifar_generator(['test_batch'], batch_size, data_dir)
+    return cifar_generator(['data_batch_1','data_batch_2','data_batch_3','data_batch_4','data_batch_5'], batch_size, data_dir),  cifar_generator(['test_batch'], batch_size, data_dir)
