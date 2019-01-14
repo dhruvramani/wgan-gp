@@ -169,7 +169,7 @@ train_gen, dev_gen = lib.cifar10.load(BATCH_SIZE, data_dir=DATA_DIR)
 
 def inf_train_gen():
     while True:
-        for images, target in train_gen():
+        for images in train_gen():
             # yield images.astype('float32').reshape(BATCH_SIZE, 3, 32, 32).transpose(0, 2, 3, 1)
             yield images
 
