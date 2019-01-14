@@ -21,7 +21,7 @@ from torch import optim
 # Download CIFAR-10 (Python version) at
 # https://www.cs.toronto.edu/~kriz/cifar.html and fill in the path to the
 # extracted files here!
-DATA_DIR = 'cifar-10-batches-py/'
+DATA_DIR = './cifar-10/'
 if len(DATA_DIR) == 0:
     raise Exception('Please specify path to data directory in gan_cifar.py!')
 
@@ -94,8 +94,8 @@ class Discriminator(nn.Module):
 
 netG = Generator()
 netD = Discriminator()
-print netG
-print netD
+print(netG)
+print(netD)
 
 use_cuda = torch.cuda.is_available()
 if use_cuda:
